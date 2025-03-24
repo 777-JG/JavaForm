@@ -4,11 +4,17 @@
 <meta charset="UTF-8">
 <title>Cadastro de Funcionário</title>
 </head>
+<link href="https://fonts.googleapis.com/css?family=Sofia" rel="stylesheet"/>
+<link href='https://fonts.googleapis.com/css?family=Aboreto' rel='stylesheet'/>
 <link rel="stylesheet" href="/style-funcionario.css"/>
 <body>
+<div class="divFunc">
+<h1>Almeida's HighSchool</h1>
+</div>
 <h2>Faça seu cadastro</h2>
+<h3>Funcionário(a)</h3>
 <div class="wrapper">
-<form action="#" th:action="@{/funcionarios}" th:object="${funcionario}" method="post">
+<form class="form" action="#" th:action="@{/funcionarios}" th:object="${funcionario}" method="post">
 RE:<input class="input" type="text" th:field="*{re}"/><br/>
 Nome:<input class="input" type="text" th:field="*{nome}"/><br/>
 Data de admissão:<input class="input" type="date" th:field="*{dataAdmissao}"/><br/>
