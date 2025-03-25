@@ -67,9 +67,17 @@ body{
 }
 
 h1{
-	font-family: 'Sofia';font-size: 22px;
+	font-family: 'Sofia';
 	font-size: 40px;
-	padding-left: 30px;
+	border: 3px solid #fff;
+	border-radius: 10px;
+	border-right: 20px;
+	border-left: 20px;
+	border-color: lightblue;
+	padding: 10px 50px;
+	display: inline-block;
+    background-image: linear-gradient(to right top, #b6aed7, #a8a0d4, #9992d2, #8985cf, #7778cd, #696cc9, #5b61c5, #4b55c1, #3f47ba, #343ab2, #282baa, #1a1ba1);    margin-left: 30px;
+    margin-top: 5px;
 }
 
 h2{
@@ -93,4 +101,8 @@ h3{
 	display: flex;
 	width: 100%;
 	padding: 40px 0px;
+}
+
+.material-icons{
+	font-size: 35px;
 }
