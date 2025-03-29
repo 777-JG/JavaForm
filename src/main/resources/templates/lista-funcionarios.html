@@ -3,18 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <title>Lista de Funcionários</title>
+<link rel="stylesheet" href="/style-lists.css"/>
 </head>
 <body>
-	<table border='1'>
+	<div class="table">
+	<table class="column" border='6'>
 	<tr>
 	<th>RE</th><th>Nome</th><th>Data de Admissão</th><th>Salário</th>
 	</tr>
-	<tr th:each="funcionario: ${funcionarios}">
-	<td th:text="${funcionario.re}">RE</td>
-	<td th:text="${funcionario.nome}">Nome</td>
-	<td th:text="${#dates.format(funcionario.dataAdmissao, 'dd/MM/yyyy')}">Data de admissão</td>
-	<td th:text="${#numbers.formatCurrency(funcionario.salario)}">Salário</td>
+	<tr class="tableborder" th:each="funcionario: ${funcionarios}">
+	<td class="textcolumn" th:text="${funcionario.re}">RE</td>
+	<td class="textcolumn" th:text="${funcionario.nome}">Nome</td>
+	<td class="textcolumn" th:text="${#dates.format(funcionario.dataAdmissao, 'dd/MM/yyyy')}">Data de admissão</td>
+	<td class="textcolumn" th:text="${#numbers.formatCurrency(funcionario.salario)}">Salário</td>
 	</tr>
 	</table>
+	</div>
 </body>
 </html>

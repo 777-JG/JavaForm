@@ -3,18 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <title>Lista de alunos</title>
+<link rel="stylesheet" href="/style-lists.css"/>
 </head>
 <body>
-	<table border='1'>
+	<div class="table">
+	<table class="column" border='6'>
 	<tr>
 	<th>RA</th><th>Nome</th><th>Data de Nascimento</th><th>Renda</th>
 	</tr>
-	<tr th:each="aluno: ${alunos}">
-	<td th:text="${aluno.ra}">RA</td>
-	<td th:text="${aluno.nome}">Nome</td>
-	<td th:text="${#dates.format(aluno.dataNascimento, 'dd/MM/yyyy')}">Data de nascimento</td>
-	<td th:text="${#numbers.formatCurrency(aluno.renda)}">Renda</td>
+	<tr class="tableborder" th:each="aluno: ${alunos}">
+	<td class="textcolumn" th:text="${aluno.ra}">RA</td>
+	<td class="textcolumn" th:text="${aluno.nome}">Nome</td>
+	<td class="textcolumn" th:text="${#dates.format(aluno.dataNascimento, 'dd/MM/yyyy')}">Data de nascimento</td>
+	<td class="textcolumn" th:text="${#numbers.formatCurrency(aluno.renda)}">Renda</td>
 	</tr>
 	</table>
+	</div>
 </body>
 </html>
