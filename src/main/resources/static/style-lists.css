@@ -9,31 +9,29 @@ body{
 	height: 100vh;
 	display: flex;
 	justify-content: center;
+	flex-direction: column;
 	align-items: center;
-	flex-direction: row;
 	background-image: linear-gradient(to right top, #72a1e8, #57b1f3, #37c1fa, #0cd0fb, #02def7);
 }
 
 .table{
 	background-color: #fff;
 	border-radius: 10px;
-	border-collapse: collapse;
-
-}
-
-.tableborder{
-	border-radius: 10px;
+	padding: 10px;
+	box-shadow: 60px -16px rgba(0,0,255,0.2);
 }
 
 .column{
-	border-radius: 10px;
+	border-radius: 40px;
 	width: 50vw;
-	height: 50vh;
+	max-width: 600px;
+	height: auto;
+	border-collapse: collapse;
 }
 th{
 	background-color: orange;
 	font-family: sans-serif;
-	color: #fff;
+	color: darkblue;
 	border: 1px solid black;
 
 }
@@ -48,4 +46,20 @@ tr:nth-child(even){
 	font-size: 20px;
 	font-family: sans-serif;
 
+}
+
+h1{
+	position: relative;
+    top: -100px;
+	text-align: center;
+	font-family: 'Aboreto';
+	text-shadow: blue 1px 0 10px;
+}
+
+.header{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: -30px;
 }

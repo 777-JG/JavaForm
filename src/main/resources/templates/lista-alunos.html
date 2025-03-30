@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+<link href='https://fonts.googleapis.com/css?family=Aboreto' rel='stylesheet'/>
 <head>
 <meta charset="UTF-8">
 <title>Lista de alunos</title>
 <link rel="stylesheet" href="/style-lists.css"/>
 </head>
 <body>
+	<div class="header">
+	<h1>Alunos Matriculados</h1>
+	</div>
 	<div class="table">
-	<table class="column" border='6'>
+	<table class="column" border='3'>
 	<tr>
 	<th>RA</th><th>Nome</th><th>Data de Nascimento</th><th>Renda</th>
 	</tr>
-	<tr class="tableborder" th:each="aluno: ${alunos}">
+	<tr th:each="aluno: ${alunos}">
 	<td class="textcolumn" th:text="${aluno.ra}">RA</td>
 	<td class="textcolumn" th:text="${aluno.nome}">Nome</td>
 	<td class="textcolumn" th:text="${#dates.format(aluno.dataNascimento, 'dd/MM/yyyy')}">Data de nascimento</td>

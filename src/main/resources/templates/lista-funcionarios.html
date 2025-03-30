@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+<link href='https://fonts.googleapis.com/css?family=Aboreto' rel='stylesheet'/>
 <head>
 <meta charset="UTF-8">
 <title>Lista de Funcionários</title>
 <link rel="stylesheet" href="/style-lists.css"/>
 </head>
 <body>
+	<div class="header">
+	<h1>Funcionários admitidos</h1>
+	</div>
 	<div class="table">
-	<table class="column" border='6'>
+	<table class="column" border='3'>
 	<tr>
 	<th>RE</th><th>Nome</th><th>Data de Admissão</th><th>Salário</th>
 	</tr>
-	<tr class="tableborder" th:each="funcionario: ${funcionarios}">
+	<tr th:each="funcionario: ${funcionarios}">
 	<td class="textcolumn" th:text="${funcionario.re}">RE</td>
 	<td class="textcolumn" th:text="${funcionario.nome}">Nome</td>
 	<td class="textcolumn" th:text="${#dates.format(funcionario.dataAdmissao, 'dd/MM/yyyy')}">Data de admissão</td>
