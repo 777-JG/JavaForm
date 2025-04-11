@@ -45,5 +45,31 @@ public class FuncionariosController {
 		model.addAttribute ("funcionarios", lista);
 		return "lista-funcionarios";
 	}
+	@GetMapping("/busca")
+	public String showBusca() {
+		return "busca-funcionario";
+	}
+	@GetMapping("/showUpdate")
+	public String showEditFuncionario(@RequestParam int re, Model model) {
+		Funcionario funcionario = dao.buscarPeloRe(re);
+		model.addAttribute("funcionario",funcionario);
+		return "alterar-funcionario";
+	}
+	@PostMapping("/update")
+	public String update(@ModelAttribute Funcionario funcionario) {
+		dao.update(funcionario);
+		return "funcionarios";
+	}
+	@GetMapping("/apagar")
+	public String showDelete(Model model) {
+		Funcionario funcionario = new Funcionario();
+		model.addAttribute("funcionario",funcionario);
+		return "apagar-funcionario";
+	}
+	@PostMapping("/delete")
+	public String delete(@ModelAttribute Funcionario funcionario) {
+		dao.delete(funcionario);
+		return "funcionarios";
+	}
 
 }

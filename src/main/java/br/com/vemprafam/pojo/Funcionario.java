@@ -1,11 +1,13 @@
 package br.com.vemprafam.pojo;
 
 import java.util.Date;
+import org.springframework.format.annotation.DateTimeFormat;
 
 public class Funcionario {
 
 	private int re;
 	private String nome;
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date dataAdmissao;
 	private Double salario;
 	public Funcionario() {
