@@ -2,13 +2,15 @@ package br.com.vemprafam.controller;
 
 import java.util.List;
 
-import org.springframework.stereotype.Controller;
 
+
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import br.com.vemprafam.dao.DaoAluno;
 import br.com.vemprafam.pojo.Aluno;
@@ -45,6 +47,32 @@ public class AlunosController {
 		List<Aluno> lista = dao.getLista();
 	model.addAttribute ("alunos", lista);
 	return "lista-alunos";
+	}
+	@GetMapping("/busca")
+	public String showBusca() {
+		return "busca-aluno";
+	}
+	@GetMapping("/showUpdate")
+	public String showEditAluno(@RequestParam int ra, Model model) {
+		Aluno aluno = dao.buscarPeloRa(ra);
+		model.addAttribute("aluno", aluno);
+		return "alterar-aluno";
+	}
+	@PostMapping("/update")
+	public String update(@ModelAttribute Aluno aluno) {
+		dao.update(aluno);
+		return "alunos";
+	}
+	@GetMapping("/apagar")
+	public String showDelete(Model model) {
+		Aluno aluno = new Aluno();
+		model.addAttribute("aluno", aluno);
+		return "apagar-aluno";
+	}
+	@PostMapping("/delete")
+	public String delete(@ModelAttribute Aluno aluno) {
+		dao.delete(aluno);
+		return "alunos";
 	}
 }
 
