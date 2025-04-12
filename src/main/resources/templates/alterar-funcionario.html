@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Alterar Funcionário</title>
+<link rel="stylesheet" href="/style-alterar.css"/>
 <script>
 	document.addEventListener('DOMContentLoaded', function() {
 		var dateField = document.getElementById('dataAdmissao');
@@ -17,14 +18,19 @@
 </script>
 </head>
 <body>
+<div class="divForm">
 <form action="#" th:action="@{/funcionarios/update}" th:object="${funcionario}" method="post">
-RE:<input type="text" th:field="*{re}"/><br/>
-nome:<input type="text" th:field="*{nome}"/><br/>
-data de admissao<input type="text" th:field="*{dataAdmissao}"
-  id='dataAdmissao'/><br/>
-Salario:<input type="text" th:field="*{salario}"/><br/>
+<label for="re">RE:</label>
+<input type="text" th:field="*{re}" id="re"/>
+<label for="nome">Nome:</label>
+<input type="text" th:field="*{nome}" id="nome"/>
+<label for="dataAdmissao">Data de Admissão:</label>
+<input type="text" th:field="*{dataAdmissao}"id='dataAdmissao'/>
+<label for="salario">Salário:</label>
+<input type="text" th:field="*{salario}" id="salario"/>
 <input type="submit" value="enviar"/>
 </form>
+</div>
 <a href="/funcionarios">voltar</a>
 </body>
 </html>

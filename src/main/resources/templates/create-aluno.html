@@ -19,7 +19,7 @@
 <form class="form" action="#" th:action="@{/alunos}" th:object="${aluno}" method="post">
 RA:<input class="input" type="text" th:field="*{ra}"/><br/>
 Nome:<input class="input" type="text" th:field="*{nome}"/><br/>
-Data de nascimento<input class="input" type="date" th:field="*{dataNascimento}"/><br/>
+Data de nascimento<input class="input" type="text" th:field="*{dataNascimento}"/><br/>
 Renda:<input class="input" type="text" th:field="*{renda}"/><br/>
 <div class="divbtn" >
 <input class="inputbtn" type="submit" value="Enviar"/>

@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Alterar Aluno</title>
+<link rel="stylesheet" href="/style-alterar.css"/>
 <script>
 	document.addEventListener('DOMContentLoaded', function() {
 		var dateField = document.getElementById('dataNascimento');
@@ -17,14 +18,21 @@
 </script>
 </head>
 <body>
+<div class="divForm">
 <form action="#" th:action="@{/alunos/update}" th:object="${aluno}" method="post">
-RA:<input type="text" th:field="*{ra}"/><br/>
-nome:<input type="text" th:field="*{nome}"/><br/>
-data de nascimento<input type="text" th:field="*{dataNascimento}"
-  id='dataNascimento'/><br/>
-renda:<input type="text" th:field="*{renda}"/><br/>
+<label for="ra">RA:</label>
+<input type="text" th:field="*{ra}" id="ra"/>
+<label for="nome">Nome:</label>
+<input type="text" th:field="*{nome}" id="nome"/>
+<label for="dataNascimento">Data de nascimento:</label>
+<input type="text" th:field="*{dataNascimento}"id='dataNascimento' placeholder="dd/mm/yyyy"/>
+<label for="renda">Renda:</label>
+<input type="text" th:field="*{renda}" id="renda"/>
 <input type="submit" value="enviar"/>
 </form>
+</div>
+<div class="divbtn">
 <a href="/alunos">voltar</a>
+</div>
 </body>
 </html>
