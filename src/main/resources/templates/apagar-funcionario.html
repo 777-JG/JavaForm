@@ -3,12 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <title>Excluir Funcionário</title>
+<link rel="stylesheet" href="/style-apagar.css"/>
 </head>
 <body>
+<div class="divForm">
 <form action="#" th:action="@{/funcionarios/delete}" th:object="${funcionario}" method="post">
-RE:<input type="text" th:field="*{re}"/><br/>
+<label for="re">RE:</label>
+<input type="text" th:field="*{re}" id="re"/>
 <input type="submit" value="enviar"/>
 </form>
 <a href="/funcionarios">voltar</a>
+</div>
 </body>
 </html>

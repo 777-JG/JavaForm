@@ -1,3 +1,4 @@
+@charset "UTF-8";
 
 body {
   font-family: Arial, sans-serif;
@@ -6,6 +7,7 @@ body {
   padding: 0;
   min-height: 100vh;
 }
+
 .divForm{
   background-color: #fff;
   max-width: 500px;
@@ -25,7 +27,6 @@ form input[type="submit"] {
   box-sizing: border-box;
   font-size: 16px;
 }
-
 form input[type="submit"] {
   background-color: #8000ff;
   color: white;
@@ -34,11 +35,9 @@ form input[type="submit"] {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
 form input[type="submit"]:hover {
   background-color: #0056b3;
 }
-
 label {
   font-weight: bold;
   margin-bottom: 10px;
@@ -47,9 +46,7 @@ label {
 a {
   display: block;
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  color: #fff;
+  color: #000;
   text-decoration: none;
   font-weight: bold;
   font-size: 20px;
