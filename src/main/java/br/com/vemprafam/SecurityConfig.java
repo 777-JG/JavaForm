@@ -1,4 +1,4 @@
-package br.com.vemprafam.pojo;
+package br.com.vemprafam;
 
 import javax.sql.DataSource;
 
