@@ -11,10 +11,10 @@ body {
 .divForm{
   background-color: #fff;
   max-width: 500px;
-  margin: 60px auto;
-  padding: 30px;
+  margin: 70px auto;
+  padding: 40px;
   border-radius: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 20px rgba(255,255,255,0.4);
 }
 
 form input[type="text"],
